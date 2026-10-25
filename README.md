@@ -2,8 +2,38 @@
 
 GDG Housing Hackathon project.
 
-Find a rental near you, open it as an editable floor plan, and walk through it in 3D with your own
-furniture, scanned with a phone.
+Housing AR helps users find housing listings that fit their needs and experience an immersive
+3D preview of setting up their dream home remotely. Search for a rental, open its editable floor
+plan, and furnish it with 3D scans of furniture you already own.
+
+The app is designed to be easy to use, even for people with no experience in 3D development.
+Arrange your existing furniture in your new home, explore the layout on a laptop or phone, and
+preview it at full size in AR on the phone. Generated floor plans are estimates that users can
+adjust to match known room dimensions.
+
+## AI models and 3D reconstruction
+
+- **SAM 2.1 Tiny (Meta's Segment Anything 2)** separates the object you tap from its background.
+- **Apple Object Capture (RealityKit)** builds detailed, textured 3D models from photos captured
+  on the phone.
+- **Open3D** handles the older depth-based reconstruction path and geometry cleanup.
+- **Trimesh, xatlas, pymeshfix and manifold3d** repair meshes, lay out texture coordinates and
+  export the GLB files loaded by the phone and website.
+- **OpenCV, scikit-image, SciPy and NumPy** handle image processing and geometry calculations.
+
+## Phone app
+
+The Android app uses **Kotlin** with **Google ARCore 1.57** for motion tracking, depth and anchors.
+It is built from Google's **hello_ar** sample renderer, which uses **OpenGL ES**.
+
+## Website
+
+- **TypeScript** is the programming language, and **Vite** is the build tool.
+- **three.js** renders the 3D room and loads your GLB furniture models.
+- **Archivo** is the typeface.
+- **Vitest and Playwright** are used for testing.
+
+## Project structure
 
 | Folder | What it is |
 | --- | --- |
