@@ -1,0 +1,10 @@
+-r requirements.txt
+open3d>=0.18,<0.21
+trimesh>=4,<5
+xatlas>=0.0.9,<1
+libusb-package>=1.0.29; sys_platform == "darwin"
+scipy>=1.11,<2
+
+pymeshfix>=0.18,<0.19
+scikit-image>=0.22,<0.27
+manifold3d>=3.5,<4

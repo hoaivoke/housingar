@@ -1,0 +1,19 @@
+{
+  "object_dimensions_m": [
+    0.4,
+    0.3,
+    0.3
+  ],
+  "object_min_world": [
+    -0.2,
+    0.61,
+    -0.15
+  ],
+  "object_max_world": [
+    0.2,
+    0.9099999999999999,
+    0.15
+  ],
+  "table_top_world_y": 0.61,
+  "description": "Textured box target, cylinder occluder, textured table, floor and surrounding walls; analytical metric geometry CPU raycast"
+}

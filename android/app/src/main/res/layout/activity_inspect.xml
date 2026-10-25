@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <android.opengl.GLSurfaceView
+      android:id="@+id/surfaceview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  <TextView
+      android:id="@+id/hud"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="top|start"
+      android:layout_marginStart="12dp"
+      android:layout_marginTop="36dp"
+      android:layout_marginEnd="64dp"
+      android:background="@color/hud_bg"
+      android:fontFamily="monospace"
+      android:padding="8dp"
+      android:textColor="#FFFFFFFF"
+      android:textSize="11sp" />
+
+  <ImageButton
+      android:id="@+id/settings_button"
+      android:layout_width="48dp"
+      android:layout_height="48dp"
+      android:layout_gravity="top|end"
+      android:layout_marginTop="32dp"
+      android:layout_marginEnd="8dp"
+      android:background="@android:color/transparent"
+      android:contentDescription="@string/settings"
+      android:src="@drawable/ic_settings" />
+
+
+  <ImageView
+      android:id="@+id/thumbnail"
+      android:layout_width="150dp"
+      android:layout_height="200dp"
+      android:layout_gravity="bottom|end"
+      android:layout_marginEnd="12dp"
+      android:layout_marginBottom="150dp"
+      android:background="#FF000000"
+      android:contentDescription="@string/thumbnail_description"
+      android:scaleType="fitCenter"
+      android:visibility="gone" />
+
+
+  <!-- Bottom stack: messages, job progress, capture / mesh controls, main buttons. -->
+  <LinearLayout
+      android:id="@+id/bottom_stack"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_gravity="bottom"
+      android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/banner_bg"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textColor="#FFFFFFFF"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/job_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="6dp"
+        android:background="@color/banner_bg"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:visibility="gone">
+
+      <TextView
+          android:id="@+id/job_status"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="#FFFFFFFF"
+          android:textSize="13sp" />
+
+      <ProgressBar
+          android:id="@+id/job_progress"
+          style="?android:attr/progressBarStyleHorizontal"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:max="1000" />
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal">
+      <Button
+          android:id="@+id/job_retry"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/job_retry"
+          android:textColor="@color/accent" />
+      <Button
+          android:id="@+id/job_cancel"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/job_cancel"
+          android:textColor="#FFBDBDBD" />
+      </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/capture_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bar_bg"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="16dp"
+        android:visibility="gone">
+    <Button
+        android:id="@+id/capture_cancel"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/capture_cancel"
+        android:textColor="#FFBDBDBD" />
+    <Button
+        android:id="@+id/capture_finish"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/capture_finish"
+        android:textColor="@color/accent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/scan_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bar_bg"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="16dp"
+        android:visibility="gone">
+    <Button
+        android:id="@+id/scan_cancel"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/scan_cancel"
+        android:textColor="#FFBDBDBD" />
+    <Button
+        android:id="@+id/scan_undo"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/scan_undo"
+        android:textColor="@color/accent" />
+    <Button
+        android:id="@+id/scan_new_thing"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/scan_new_thing"
+        android:textColor="@color/accent" />
+    <Button
+        android:id="@+id/scan_finish"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:text="@string/scan_finish"
+        android:textColor="@color/accent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/place_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/mesh_bar_bg"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:visibility="gone">
+    <Button
+        android:id="@+id/place_rotate_left"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/place_rotate_left"
+        android:textColor="@color/accent" />
+    <Button
+        android:id="@+id/place_rotate_right"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/place_rotate_right"
+        android:textColor="@color/accent" />
+    <Button
+        android:id="@+id/place_move"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/place_move"
+        android:textColor="@color/accent" />
+    <Button
+        android:id="@+id/place_delete"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/place_delete"
+        android:textColor="#FFEF9A9A" />
+    <Button
+        android:id="@+id/place_done"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/place_done"
+        android:textColor="#FFBDBDBD" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_bar"
+        android:background="@color/bar_bg"
+        android:orientation="horizontal"
+        android:paddingStart="4dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="4dp"
+        android:paddingBottom="16dp">
+
+        <Button
+          android:id="@+id/btn_scan"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/btn_scan"
+          android:textColor="@color/accent" />
+      <Button
+          android:id="@+id/btn_library"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/btn_library"
+          android:textColor="@color/accent" />
+      <Button
+          android:id="@+id/btn_select"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/btn_select_one"
+          android:textColor="@color/accent" />
+      <Button
+          android:id="@+id/btn_more"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/btn_more"
+          android:textColor="@color/accent" />
+  </LinearLayout>
+  </LinearLayout>
+
+  <!-- Frozen-frame review of a selection: corrections happen on the captured frame. -->
+  <LinearLayout
+      android:id="@+id/review_panel"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/review_bg"
+      android:clickable="true"
+      android:focusable="true"
+      android:orientation="vertical"
+      android:paddingStart="12dp"
+      android:paddingTop="36dp"
+      android:paddingEnd="12dp"
+      android:paddingBottom="16dp"
+      android:visibility="gone">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/review_title"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/review_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:contentDescription="@string/review_image_description"
+        android:scaleType="fitCenter" />
+
+    <TextView
+        android:id="@+id/review_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minLines="3"
+        android:textColor="#FFE0E0E0"
+        android:textSize="13sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <Button
+          android:id="@+id/review_add"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/review_add"
+          android:textColor="#FF66BB6A" />
+
+      <Button
+          android:id="@+id/review_remove"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/review_remove"
+          android:textColor="#FFEF5350" />
+
+      <Button
+          android:id="@+id/review_undo"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/review_undo"
+          android:textColor="@color/accent" />
+
+      <Button
+          android:id="@+id/review_next"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/review_next"
+          android:textColor="@color/accent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <Button
+          android:id="@+id/review_cancel"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/review_cancel"
+          android:textColor="#FFBDBDBD" />
+
+      <Button
+          android:id="@+id/review_accept"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1.5"
+          android:text="@string/review_accept"
+          android:textColor="@color/accent" />
+
+      <Button
+          android:id="@+id/review_create_mesh"
+          style="?android:attr/buttonBarButtonStyle"
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="1.5"
+          android:text="@string/review_create_mesh"
+          android:textColor="#FFFFD54F"
+          android:textStyle="bold" />
+    </LinearLayout>
+  </LinearLayout>
+
+  <!-- Full-screen sheet for "Objects found" (scan proposals) and "My stuff" (library). -->
+  <LinearLayout
+      android:id="@+id/sheet_panel"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/review_bg"
+      android:clickable="true"
+      android:focusable="true"
+      android:orientation="vertical"
+      android:paddingStart="12dp"
+      android:paddingTop="36dp"
+      android:paddingEnd="12dp"
+      android:paddingBottom="12dp"
+      android:visibility="gone">
+
+    <TextView
+        android:id="@+id/sheet_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/sheet_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="#FFBDBDBD"
+        android:textSize="13sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1">
+
+      <LinearLayout
+          android:id="@+id/sheet_list"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/sheet_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+  </LinearLayout>
+</FrameLayout>

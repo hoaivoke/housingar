@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Prototype only: the Mac segmentation service is plain HTTP on the local network or over
+     `adb reverse`. Replace with HTTPS before any use outside a trusted local setup. -->
+<network-security-config>
+  <base-config cleartextTrafficPermitted="true" />
+</network-security-config>

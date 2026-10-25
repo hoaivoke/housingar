@@ -1,0 +1,75 @@
+{
+  "report_method": "depth_fusion",
+  "report_warnings": [
+    "Explicit depth-bbox mask fallback/test mode was used; this is not SAM video segmentation quality evidence",
+    "Depth-constrained recovery used on 35 frames; inspect the mask contact sheet",
+    "TSDF edge spill was clipped to the selected bbox plus one voxel; an undersized capture bbox can truncate the object",
+    "Object Capture was explicitly disabled for this run",
+    "Reflective, transparent, thin or textureless surfaces can fail; real-room quality has not been measured",
+    "Background geometry is valid only near observed support/scan viewpoints; unseen shape is not guaranteed",
+    "3D background patch covers less than 98% of the reconstructed object from a nearby scan view; capture more support surfaces"
+  ],
+  "report_low_quality": true,
+  "footprint_rays_hitting_support": 98,
+  "seed_bbox_min_anchor": [
+    -0.6413943767547607,
+    0.7220243215560913,
+    -0.2210981249809265
+  ],
+  "seconds": 100.608,
+  "footprint_rays": 100,
+  "report_dimensions_m": [
+    0.4494256235853302,
+    0.2932312612406467,
+    0.44147834008745135
+  ],
+  "placement_error_m": 0.02833314976695919,
+  "footprint_rays_blocked_above_support": 2,
+  "background_triangles": 50000,
+  "archive_bytes": 2276553,
+  "object_up_in_world": [
+    0,
+    1,
+    0
+  ],
+  "truth_dims_m": [
+    0.4000000059604645,
+    0.30000001192092896,
+    0.30000001192092896
+  ],
+  "background_vertices": 27013,
+  "states_seen": [
+    "validating",
+    "reconstructing_object",
+    "reconstructing_background",
+    "texturing",
+    "exporting",
+    "done"
+  ],
+  "truth_corners_inside_removal_region": 6,
+  "object_extent_m": [
+    0.4494256377220154,
+    0.2932312488555908,
+    0.44147834181785583
+  ],
+  "object_world_min": [
+    -0.21150314807891846,
+    0.6180548667907715,
+    -0.1536298245191574
+  ],
+  "seed_support_height_anchor": 0.7100242972373962,
+  "job_id": "37d9060dec814b24a1323664fb90411b",
+  "true_top_corners_reached": 3,
+  "seed_bbox_max_anchor": [
+    -0.18426728248596191,
+    1.0401599407196045,
+    0.2360289990901947
+  ],
+  "capture_id": "phone_e2e_244093",
+  "object_world_max": [
+    0.210357666015625,
+    0.9112861156463623,
+    0.1549597978591919
+  ],
+  "object_triangles": 50000
+}

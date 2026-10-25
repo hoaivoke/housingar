@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="hud_bg">#B3000000</color>
+  <color name="banner_bg">#E6202A44</color>
+  <color name="bar_bg">#99000000</color>
+  <color name="review_bg">#F2101418</color>
+  <color name="mesh_bar_bg">#CC14202A</color>
+  <color name="accent">#FF35C4D6</color>
+</resources>

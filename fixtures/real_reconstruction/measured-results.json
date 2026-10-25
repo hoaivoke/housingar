@@ -1,0 +1,191 @@
+[
+  {
+    "recording": "scans/6fb50237_scan_93413134",
+    "input_sha256": "71305864a08d16db6621744005352b092f4d1a930fb7508f9da9e571c1d96062",
+    "frames": 55,
+    "before": {
+      "dimensions_m": [
+        0.9200374405348288,
+        0.6787386388977257,
+        0.8239851816908819
+      ],
+      "observed_fraction": 0.4318704303744313,
+      "components": 466,
+      "depth_components": 3619
+    },
+    "method": "apple_masked_photogrammetry",
+    "dimensions_m": [
+      0.5321534709073426,
+      0.7900999784469604,
+      0.5226852198634555
+    ],
+    "closed_surface": {
+      "vertices": 19245,
+      "triangles": 38490,
+      "components": 1,
+      "watertight": true,
+      "self_intersecting": false,
+      "boundary_or_nonmanifold_edges": 0
+    },
+    "observed_texel_fraction": 0.7242241996337522,
+    "mask_validation": {
+      "recall": 0.9653774397244547,
+      "precision": 0.9598813460416261,
+      "lower_recall": 0.796142208774584,
+      "upper_recall": 0.9845289712258574
+    },
+    "registration_rms_m": 0.005936833363690801,
+    "geometry_seconds": 33.80227337498218,
+    "texture_and_export_seconds": 31.96550795796793,
+    "total_seconds": 65.77281224995386,
+    "height_evidence": {
+      "reference": "gravity plane through anchor origin, metres",
+      "photogrammetry": {
+        "vertices": 9936,
+        "above_reference": 0,
+        "above_reference_plus_5cm": 0,
+        "min_height_m": -1.398771882707357,
+        "max_height_m": -0.610066543041117
+      },
+      "final": {
+        "vertices": 19245,
+        "above_reference": 0,
+        "above_reference_plus_5cm": 0,
+        "min_height_m": -1.3994849920272827,
+        "max_height_m": -0.6093850135803223
+      }
+    },
+    "low_quality": false,
+    "mask_provenance": {
+      "backend": "sam2_video",
+      "model": "facebook/sam2.1-hiera-tiny",
+      "device": "cpu"
+    }
+  },
+  {
+    "recording": "scans/baae385b_scan_91807239",
+    "input_sha256": "1a1e5dc0f3fb65d7ffc6f0945ce9428156dc920e9c4c6d9956679cf4a1dc6edc",
+    "frames": 60,
+    "before": {
+      "dimensions_m": [
+        0.831240402333715,
+        0.7848834824299207,
+        0.7800005776082376
+      ],
+      "observed_fraction": 0.5301827163740356,
+      "components": 812,
+      "depth_components": 4767
+    },
+    "method": "apple_masked_photogrammetry",
+    "dimensions_m": [
+      0.6787184836356932,
+      0.8838270306587219,
+      0.6571476971775212
+    ],
+    "closed_surface": {
+      "vertices": 9329,
+      "triangles": 18662,
+      "components": 1,
+      "watertight": true,
+      "self_intersecting": false,
+      "boundary_or_nonmanifold_edges": 0
+    },
+    "observed_texel_fraction": 0.6691120602236762,
+    "mask_validation": {
+      "recall": 0.9476286714721733,
+      "precision": 0.9700572571264687,
+      "lower_recall": 0.8218593602067225,
+      "upper_recall": 0.9310565790365504
+    },
+    "registration_rms_m": 0.01358566736668028,
+    "geometry_seconds": 29.423496624920517,
+    "texture_and_export_seconds": 30.593342209002003,
+    "total_seconds": 60.020547625026666,
+    "height_evidence": {
+      "reference": "gravity plane through anchor origin, metres",
+      "photogrammetry": {
+        "vertices": 12245,
+        "above_reference": 0,
+        "above_reference_plus_5cm": 0,
+        "min_height_m": -1.4120128111719896,
+        "max_height_m": -0.5281862927457648
+      },
+      "final": {
+        "vertices": 9329,
+        "above_reference": 0,
+        "above_reference_plus_5cm": 0,
+        "min_height_m": -1.412013053894043,
+        "max_height_m": -0.528186023235321
+      }
+    },
+    "low_quality": false,
+    "mask_provenance": {
+      "backend": "sam2_video",
+      "model": "facebook/sam2.1-hiera-tiny",
+      "device": "cpu"
+    }
+  },
+  {
+    "recording": "captures/d7ce4323_obj2_70861434",
+    "input_sha256": "3048b8f1253471552c89426971b0f230a1fbc4af79f4d93e1e9607aa5596771d",
+    "frames": 50,
+    "before": {
+      "dimensions_m": [
+        0.8406186180736019,
+        0.3651954753928143,
+        0.6284057029657167
+      ],
+      "observed_fraction": 0.9989242548328564,
+      "components": 67,
+      "depth_components": null
+    },
+    "method": "apple_masked_photogrammetry",
+    "dimensions_m": [
+      0.5738188253015637,
+      0.8181360065937042,
+      0.500309204825055
+    ],
+    "closed_surface": {
+      "vertices": 9909,
+      "triangles": 19826,
+      "components": 1,
+      "watertight": true,
+      "self_intersecting": false,
+      "boundary_or_nonmanifold_edges": 0
+    },
+    "observed_texel_fraction": 0.7626268695954257,
+    "mask_validation": {
+      "recall": 0.958502664435618,
+      "precision": 0.9899826396437035,
+      "lower_recall": 0.8744155394229242,
+      "upper_recall": 0.9535359682423157
+    },
+    "registration_rms_m": 0.01131581600784909,
+    "geometry_seconds": 23.467729166965,
+    "texture_and_export_seconds": 21.07879395794589,
+    "total_seconds": 44.549869667040184,
+    "height_evidence": {
+      "reference": "gravity plane through anchor origin, metres",
+      "photogrammetry": {
+        "vertices": 12277,
+        "above_reference": 6225,
+        "above_reference_plus_5cm": 4142,
+        "min_height_m": -0.4489468549401972,
+        "max_height_m": 0.3691888302456158
+      },
+      "final": {
+        "vertices": 9909,
+        "above_reference": 5192,
+        "above_reference_plus_5cm": 3401,
+        "min_height_m": -0.448947012424469,
+        "max_height_m": 0.36918899416923523
+      }
+    },
+    "low_quality": false,
+    "mask_provenance": {
+      "backend": "sam2",
+      "model": "facebook/sam2.1-hiera-tiny",
+      "device": "cpu"
+    }
+  }
+]

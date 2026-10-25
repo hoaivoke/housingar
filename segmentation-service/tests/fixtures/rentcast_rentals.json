@@ -1,0 +1,153 @@
+[
+  {
+    "id": "100-Fictional-Example-Ave,-Austin,-TX-78701",
+    "formattedAddress": "100 Fictional Example Ave, Apt 1, Austin, TX 78701",
+    "addressLine1": "100 Fictional Example Ave",
+    "addressLine2": "Apt 1",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78701",
+    "latitude": 30.2672,
+    "longitude": -97.7431,
+    "propertyType": "Apartment",
+    "bedrooms": 0,
+    "bathrooms": 1,
+    "squareFootage": 450,
+    "status": "Active",
+    "price": 1400,
+    "listingType": "Standard",
+    "listedDate": "2026-10-20T00:00:00.000Z",
+    "lastSeenDate": "2026-10-25T00:00:00.000Z",
+    "daysOnMarket": 5,
+    "listingAgent": {
+      "name": "Fictional Agent",
+      "phone": "5125550100",
+      "email": "agent@example.invalid",
+      "website": "https://example.invalid/agent"
+    },
+    "listingOffice": {
+      "name": "Fictional Rental Office",
+      "phone": "5125550101"
+    }
+  },
+  {
+    "id": "101-Fictional-Example-Ave,-Austin,-TX-78701",
+    "formattedAddress": "101 Fictional Example Ave, Apt 2, Austin, TX 78701",
+    "addressLine1": "101 Fictional Example Ave",
+    "addressLine2": "Apt 2",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78701",
+    "latitude": 30.2682,
+    "longitude": -97.7421,
+    "propertyType": "Apartment",
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "squareFootage": null,
+    "status": "Active",
+    "price": 1800,
+    "listingType": "Standard",
+    "listedDate": "2026-10-20T00:00:00.000Z",
+    "lastSeenDate": "2026-10-25T00:00:00.000Z",
+    "daysOnMarket": 5,
+    "listingAgent": null,
+    "listingOffice": {
+      "name": "Fictional Rental Office",
+      "phone": "5125550101"
+    }
+  },
+  {
+    "id": "102-Fictional-Example-Ave,-Austin,-TX-78701",
+    "formattedAddress": "102 Fictional Example Ave, Apt 3, Austin, TX 78701",
+    "addressLine1": "102 Fictional Example Ave",
+    "addressLine2": "Apt 3",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78701",
+    "latitude": 30.269199999999998,
+    "longitude": -97.7411,
+    "propertyType": "Apartment",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "squareFootage": 950,
+    "status": "Active",
+    "price": 2200,
+    "listingType": "Standard",
+    "listedDate": "2026-10-20T00:00:00.000Z",
+    "lastSeenDate": "2026-10-25T00:00:00.000Z",
+    "daysOnMarket": 5,
+    "listingAgent": {
+      "name": "Fictional Agent",
+      "phone": "5125550100",
+      "email": "agent@example.invalid",
+      "website": "https://example.invalid/agent"
+    },
+    "listingOffice": {
+      "name": "Fictional Rental Office",
+      "phone": "5125550101"
+    },
+    "listingUrl": "https://example.invalid/provided-property"
+  },
+  {
+    "id": "103-Fictional-Example-Ave,-Austin,-TX-78701",
+    "formattedAddress": "103 Fictional Example Ave, Apt 4, Austin, TX 78701",
+    "addressLine1": "103 Fictional Example Ave",
+    "addressLine2": "Apt 4",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78701",
+    "latitude": 30.2702,
+    "longitude": -97.7401,
+    "propertyType": "Apartment",
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "squareFootage": null,
+    "status": "Active",
+    "price": 2600,
+    "listingType": "Standard",
+    "listedDate": "2026-10-20T00:00:00.000Z",
+    "lastSeenDate": "2026-10-25T00:00:00.000Z",
+    "daysOnMarket": 5,
+    "listingAgent": {
+      "name": "Fictional Agent",
+      "phone": "5125550100",
+      "email": "agent@example.invalid",
+      "website": "https://example.invalid/agent"
+    },
+    "listingOffice": {
+      "name": "Fictional Rental Office",
+      "phone": "5125550101"
+    }
+  },
+  {
+    "id": "104-Fictional-Example-Ave,-Austin,-TX-78701",
+    "formattedAddress": "104 Fictional Example Ave, Apt 5, Austin, TX 78701",
+    "addressLine1": "104 Fictional Example Ave",
+    "addressLine2": "Apt 5",
+    "city": "Austin",
+    "state": "TX",
+    "zipCode": "78701",
+    "latitude": 30.2712,
+    "longitude": -97.7391,
+    "propertyType": "Apartment",
+    "bedrooms": 4,
+    "bathrooms": 2,
+    "squareFootage": 1450,
+    "status": "Active",
+    "price": 3000,
+    "listingType": "Standard",
+    "listedDate": "2026-10-20T00:00:00.000Z",
+    "lastSeenDate": "2026-10-25T00:00:00.000Z",
+    "daysOnMarket": 5,
+    "listingAgent": {
+      "name": "Fictional Agent",
+      "phone": "5125550100",
+      "email": "agent@example.invalid",
+      "website": "https://example.invalid/agent"
+    },
+    "listingOffice": {
+      "name": "Fictional Rental Office",
+      "phone": "5125550101"
+    }
+  }
+]

@@ -1,0 +1,28 @@
+# Environments, caches and build output
+.venv/
+.cache/
+.tools/
+.build/
+.gradle/
+.kotlin/
+.pytest_cache/
+__pycache__/
+node_modules/
+build/
+local.properties
+*.apk
+*.log
+.DS_Store
+.github-upload.tgz
+
+# Personal data: scans, captures, the My stuff library, real phone photos
+segmentation-service/data/
+phone-scans/
+phone-library/
+phone-library2/
+fixtures/real_chair_capture_v1/
+
+# Saved VT Off-Campus Housing listings: personal, non-commercial use only (see listings_data/README.md)
+segmentation-service/listings_data/nrv_vt_offcampus.json
+segmentation-service/listings_data/source/*.json
+segmentation-service/listings_data/source/*.csv
